@@ -1,0 +1,12 @@
+@source sh
+make_blast_database () {
+  # unimplemented
+}
+
+run_blast () {
+  # unimplemented
+}
+
+db=$(make_blast_database $target_dir) || echo "Failed to make the blast database" >&2 && exit 1
+
+run_blast $query $db || echo "BLAST failed" && exit 1

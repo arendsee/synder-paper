@@ -1,0 +1,17 @@
+@comment
+
+Extract the Ty1 transposon DNA sequences from S. cerivisiae given a GFF and genome
+
+@type
+get_focal_ty1_models :: [File] -> File
+
+@source sh
+get_focal_ty1_models (){
+    gff=$1
+    fna=$2
+    # ...
+}
+
+getfasta(){
+    bedtools getfasta -bed $1 -fi $2 $@
+}

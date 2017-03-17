@@ -1,0 +1,27 @@
+@type
+wget ::
+       File   # URL, may contain globs
+    -> File   # output directory name
+    -> [File] # list of retrieved files
+
+get_gene_models       :: void -> [File]
+get_genomes           :: void -> [File]
+get_focal_gene_models :: void ->  File
+get_focal_genome      :: void ->  File
+
+@source sh
+get_gene_models(){
+
+}
+
+get_genomes(){
+
+}
+
+get_focal_gene_models(){
+
+}
+
+get_focal_genome(){
+
+}

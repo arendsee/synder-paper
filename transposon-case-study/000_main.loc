@@ -1,0 +1,22 @@
+@path
+# Retrieve input data
+S1 ::
+  get_gene_models
+  get_genomes
+  get_focal_gene_models
+  get_focal_genome
+
+S2 ::
+  get_focal_ty1_models . <get_focal_gene_models>
+
+S3 ::
+  getfasta:ty1 .
+    <get_focal_ty1_models>
+    <get_focal_genome>
+
+S4 ::
+  make_blast_database
+  run_blast
+
+S5 ::
+  synder_analysis . <run_blast>
